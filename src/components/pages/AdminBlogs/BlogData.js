@@ -75,11 +75,9 @@ class BlogData extends Component {
           </div>
           <pre
             style={{
-              fontWeight: 'lighter',
-              fontSize: '30px',
-              paddingLeft: '30px',
-              paddingRight: '30px',
-              maxWidth: '80%',
+              paddingLeft: '25px',
+              paddingRight: '25 px',
+              maxWidth: '100%',
               overflowWrap: 'break-word',
               overflow: 'ellipsis',
               whiteSpace: 'pre-wrap',

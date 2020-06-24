@@ -61,9 +61,9 @@ class BlogData extends Component {
           </div>
           <pre
             style={{
-              paddingLeft: '30px',
-              paddingRight: '30px',
-              maxWidth: '80%',
+              paddingLeft: '25px',
+              paddingRight: '25px',
+              maxWidth: '100%',
               overflowWrap: 'break-word',
               overflow: 'ellipsis',
               whiteSpace: 'pre-wrap',
@@ -100,8 +100,8 @@ class BlogData extends Component {
                 Enter a Comment:
               </label>
               <textarea
+                style={{width:'70%'}}
                 name="Text1"
-                cols="100"
                 rows="5"
                 placeholder="Enter comment here...."
                 onChange={(e) =>
@@ -110,7 +110,7 @@ class BlogData extends Component {
             </div>
             <button
               onClick={this.props.comment.bind(this, this.state.comment)}
-              className="btn btn-default">
+              className="btn btn-success">
               Submit
             </button>
           </form>
