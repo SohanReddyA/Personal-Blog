@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 class CreateBlog extends Component {
-    
   state = {
-    title: "",
-    body: "",
-    imgUrl: "",
+    title: '',
+    body: '',
+    imgUrl: '',
   };
   render() {
     return (
@@ -25,10 +24,8 @@ class CreateBlog extends Component {
             <label for="ImgUrl">Image Url:</label>
             <input
               type="text"
-              className="form-control"              
-              onChange={(e) =>
-                this.setState({ imgUrl: e.target.value || '' })
-              }
+              className="form-control"
+              onChange={(e) => this.setState({ imgUrl: e.target.value || '' })}
             />
           </div>
           <div className="form-group">
@@ -37,22 +34,22 @@ class CreateBlog extends Component {
               className="form-control"
               name="Text1"
               cols="100"
-              rows="25"              
+              rows="25"
               onChange={(e) =>
                 this.setState({ body: e.target.value })
               }></textarea>
           </div>
-        <Link to="/admin/">
-          <button
-            onClick={this.props.create.bind(
-              this,
-              this.state.title,
-              this.state.body,
-              this.state.imgUrl
-            )}
-            className="btn btn-default">
-            Save
-          </button>
+          <Link to="/admin/">
+            <button
+              onClick={this.props.create.bind(
+                this,
+                this.state.title,
+                this.state.body,
+                this.state.imgUrl
+              )}
+              className="btn btn-success">
+              Save
+            </button>
           </Link>
         </form>
       </div>
