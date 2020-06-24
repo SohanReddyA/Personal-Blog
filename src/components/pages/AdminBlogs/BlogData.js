@@ -19,12 +19,13 @@ class BlogData extends Component {
   };
   imgStyle = () => {
     return {
-      minWidth: '480px',
-      maxWidth: '900px',
+      minWidth: '60%',
+      maxWidth: '60% ',
     };
   };
   blogStyle = () => {
     return {
+      backgroundColor:'white',
       margin: '10px',
       padding: '10px',
     };
@@ -46,7 +47,7 @@ class BlogData extends Component {
       <div className="container-fluid" style={this.blogStyle()}>
         <Link to="/admin/">
           <button
-            className="btn btn-primary"
+            className="btn btn-info"
             style={{ float: 'right',marginLeft:'15px' }}
             onClick={this.props.delete}>
             <i class="fas fa-trash"></i>
@@ -54,7 +55,7 @@ class BlogData extends Component {
         </Link>
         <Link to="/admin/editBlog">
           <button
-            className="btn btn-primary"
+            className="btn btn-secondary"
             style={{ float: 'right',marginLeft:'15px' }}>
             <i class="far fa-edit"></i>
           </button>

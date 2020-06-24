@@ -18,6 +18,11 @@ class DashBoard extends Component {
     password: '',
     blogId: 0,
   };
+  style=() =>{
+    return{
+      
+    }
+  }
   componentWillMount() {
     console.log('Getting Blogs');
     this.getBlogs();
@@ -117,14 +122,16 @@ class DashBoard extends Component {
   render() {
     if (this.state.blogs == []) this.getBlogs();
     return (
-      <Router>
+      <Router style={this.style()}>
         <Route exact path="/admin/">
           <Link to="/admin/createBlog">
+            <div className="text-center">
             <button
-              className="btn btn-primary btn-block"
-              style={{ textAlign: 'center', height: '60px' }}>
+              className="btn btn-warning"
+              style={{marginTop:'10px',textAlign: 'center', height: '60px' }}>
               Create a new Blog
             </button>
+            </div>
           </Link>
           <div className="container mt-5">
             <Blogs
@@ -142,11 +149,13 @@ class DashBoard extends Component {
         </Route>
         <Route exact path="/admin/#">
           <Link to="/admin/createBlog">
+            <div className="text-center">
             <button
-              className="btn btn-primary btn-block"
-              style={{ textAlign: 'center', height: '60px' }}>
+              className="btn btn-warning"
+              style={{marginTop:'10px',textAlign: 'center', height: '60px' }}>
               Create a new Blog
             </button>
+            </div>
           </Link>
           <div className="container mt-5">
             <Blogs
@@ -164,11 +173,13 @@ class DashBoard extends Component {
         </Route>
         <Route exact path="/admin/blogData">
           <Link to="/admin/createBlog">
+            <div className="text-center">
             <button
-              className="btn btn-primary btn-block"
-              style={{ textAlign: 'center', height: '60px' }}>
+              className="btn btn-warning"
+              style={{marginTop:'10px',textAlign: 'center', height: '60px' }}>
               Create a new Blog
             </button>
+            </div>
           </Link>
           <BlogData
             loading={this.state.loadingBlog}

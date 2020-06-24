@@ -7,18 +7,6 @@ class Admin extends Component {
     password: '',
     success: 0,
   };
-  StyleForm = () => {
-    return {
-      padding: '100px 500px 0px',
-    };
-  };
-  StyleButton = () => {
-    return {
-      margin: '0px 0px 0px',
-      width: '535px',
-    };
-  };
-
   Login = () => {
     if (
       this.state.userName === this.props.userName &&
@@ -34,12 +22,13 @@ class Admin extends Component {
     if (this.state.success === 0) {
       return (
         <React.Fragment>
-          <form style={this.StyleForm()} action="javascript:void(0);">
+          <form style={{marginTop:'50px'}} className="form-horizontal text-center justify-content-center" action="javascript:void(0);">
             <div className="form-group">
               <label for="userName">UserName:</label>
-              <input
+              <input 
+                style={{display:'inline'}}
                 type="text"
-                className="form-control"
+                className="form-control col-xs-offset-3 col-xs-6 col-md-offset-4 col-md-4 "
                 id="email"
                 onChange={(e) => {
                   this.setState({ userName: e.target.value || '' });
@@ -49,8 +38,9 @@ class Admin extends Component {
             <div className="form-group">
               <label for="pwd">Password:</label>
               <input
+                style={{display:'inline'}}
                 type="password"
-                className="form-control"
+                className="form-control col-xs-offset-3 col-xs-6 col-md-offset-4 col-md-4"
                 id="pwd"
                 onChange={(e) =>
                   this.setState({ password: e.target.value || '' })
@@ -59,8 +49,7 @@ class Admin extends Component {
             </div>
             <button
               onClick={this.Login}
-              style={this.StyleButton()}
-              className="btn btn-default">
+              className="btn btn-success">
               Submit
             </button>
           </form>

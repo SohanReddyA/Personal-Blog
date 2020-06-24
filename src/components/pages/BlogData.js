@@ -20,12 +20,13 @@ class BlogData extends Component {
   };
   imgStyle = () => {
     return {
-      minWidth: '480px',
-      maxWidth: '900px',
+      minWidth: '60%',
+      maxWidth: '60%',
     };
   };
   blogStyle = () => {
     return {
+      backgroundColor:'white',
       margin: '10px',
       padding: '10px',
     };
@@ -60,8 +61,6 @@ class BlogData extends Component {
           </div>
           <pre
             style={{
-              fontWeight: 'lighter',
-              fontSize: '30px',
               paddingLeft: '30px',
               paddingRight: '30px',
               maxWidth: '80%',

@@ -8,12 +8,13 @@ export class Blog extends Component {
   };
   imgStyle = () => {
     return {
-      width: '500px',
+      width: '40%',
+      height:'40%'
     };
   };
   blogStyle = () => {
     return {
-      backgroundColor: '#d9d9d9',
+      backgroundColor:'white',
       margin: '10px',
       padding: '10px',
       border: '1px solid black',
@@ -39,7 +40,7 @@ export class Blog extends Component {
           }}>
           <img src={imgUrl} style={this.imgStyle()} alt="No Pic" />
         </div>
-        <p style={{ fontSize: '25px', fontStyle: 'italic' }}>{body}...</p>
+        <p style={{ fontStyle: 'italic' }}>{body}...</p>
         <Link to="/admin/blogData">
           <button
             className="btn btn-primary"
@@ -48,7 +49,7 @@ export class Blog extends Component {
           </button>
         </Link>
           <button
-            className="btn btn-primary"
+            className="btn btn-secondary"
             style={{ float: 'right' }}
             onClick={this.props.delete.bind(this, _id)}>
             <i class="fas fa-trash"></i>

@@ -8,12 +8,13 @@ export class Blog extends Component {
   };
   imgStyle = () => {
     return {
-      width: '500px',
+      width: '40%',
+      height: '40%',
     };
   };
   blogStyle = () => {
     return {
-      backgroundColor: '#d9d9d9',
+      backgroundColor:'white',
       margin: '10px',
       padding: '10px',
       border: '1px solid black',
@@ -31,19 +32,18 @@ export class Blog extends Component {
           }}>
           {title}
         </h1>
-        <div style={{
-          display:'flex',
-      justifyContent: 'center',
-      alignItems: 'center'}}>
-        <img
-          src={imgUrl}
-          style={this.imgStyle()}
-          alt="No Pic"
-        /></div>
-        <p style={{fontSize:"25px",fontStyle:'italic'}}>{body}...</p>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <img src={imgUrl} style={this.imgStyle()} alt="No Pic" />
+        </div>
+        <p style={{ fontStyle: 'italic' }}>{body}...</p>
         <Link to="/blogData">
           <button
-            className="btn btn-primary"
+            className="btn btn-secondary"
             onClick={this.props.blogId.bind(this, _id)}>
             Read More
           </button>
@@ -52,6 +52,5 @@ export class Blog extends Component {
     );
   }
 }
-
 
 export default Blog;
