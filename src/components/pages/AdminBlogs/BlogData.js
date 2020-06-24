@@ -25,6 +25,7 @@ class BlogData extends Component {
   };
   blogStyle = () => {
     return {
+      width:'90%',
       backgroundColor:'white',
       margin: '10px',
       padding: '10px',
