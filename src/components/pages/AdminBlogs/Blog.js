@@ -15,7 +15,7 @@ export class Blog extends Component {
   blogStyle = () => {
     return {
       backgroundColor:'white',
-      margin: '10px',
+      marginTop: '10px',
       padding: '10px',
       border: '1px solid black',
     };
