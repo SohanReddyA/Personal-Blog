@@ -40,16 +40,19 @@ class CreateBlog extends Component {
               }></textarea>
           </div>
           <Link to="/admin/">
-            <button
-              onClick={this.props.create.bind(
-                this,
-                this.state.title,
-                this.state.body,
-                this.state.imgUrl
-              )}
-              className="btn btn-success">
-              Save
-            </button>
+            <div className="text-center">
+              <button
+                style={{ marginBottom: '50px' }}
+                onClick={this.props.create.bind(
+                  this,
+                  this.state.title,
+                  this.state.body,
+                  this.state.imgUrl
+                )}
+                className="btn btn-success">
+                Save
+              </button>
+            </div>
           </Link>
         </form>
       </div>

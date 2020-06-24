@@ -25,10 +25,11 @@ class BlogData extends Component {
   };
   blogStyle = () => {
     return {
-      width:'90%',
-      backgroundColor:'white',
-      margin: '10px',
-      padding: '10px',
+      textAlign: 'center',
+      width: '90%',
+      backgroundColor: 'white',
+      paddingTop: '10px',
+      marginTop: '20px',
     };
   };
   render() {
@@ -49,7 +50,7 @@ class BlogData extends Component {
         <Link to="/admin/">
           <button
             className="btn btn-info"
-            style={{ float: 'right',marginLeft:'15px' }}
+            style={{ float: 'right', marginLeft: '15px' }}
             onClick={this.props.delete}>
             <i class="fas fa-trash"></i>
           </button>
@@ -57,11 +58,11 @@ class BlogData extends Component {
         <Link to="/admin/editBlog">
           <button
             className="btn btn-secondary"
-            style={{ float: 'right',marginLeft:'15px' }}>
+            style={{ float: 'right', marginLeft: '15px' }}>
             <i class="far fa-edit"></i>
           </button>
         </Link>
-        <div className="container-fluid" style={this.blogStyle()}>
+        <div className="container-fluid">
           <h1 className="display-4" style={{ textAlign: 'center' }}>
             {title}
           </h1>
@@ -76,11 +77,9 @@ class BlogData extends Component {
           </div>
           <pre
             style={{
-              paddingLeft: '25px',
-              paddingRight: '25 px',
               maxWidth: '100%',
               overflowWrap: 'break-word',
-              overflow: 'ellipsis',
+              overflow: 'hidden',
               whiteSpace: 'pre-wrap',
             }}>
             {body}
@@ -98,20 +97,26 @@ class BlogData extends Component {
             </div>
           </div>
         </div>
-        <div style={{marginLeft:'30px'}}>
+        <div style={{ marginLeft: '30px' }}>
           <h1>Comments:</h1>
-          {comments.map((number, i) => (
-            <div>
-              <div>
-                {number}
+          <div style={{ paddingBottom: '20px', marginBottom: '20px' }}>
+            {comments.map((number, i) => (
+              <div
+                style={{
+                  padding: '25px',
+                  marginBottom: '30px',
+                  border: '2px solid black',
+                  textAlign: 'left',
+                }}>
+                <p style={{ display: 'inline' }}>{number}</p>
                 <button
-                  style={{ display: 'inline', marginLeft: '30px' }}
+                  style={{ float: 'right' }}
                   onClick={this.props.comment.bind(this, i + 1)}>
                   <i class="fas fa-trash"></i>
                 </button>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     );

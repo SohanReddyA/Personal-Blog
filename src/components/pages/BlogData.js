@@ -26,9 +26,10 @@ class BlogData extends Component {
   };
   blogStyle = () => {
     return {
+      textAlign:'center',
+      width:'90%',
       backgroundColor:'white',
-      margin: '10px',
-      padding: '10px',
+      marginTop:'30px'
     };
   };
   render() {
@@ -46,7 +47,7 @@ class BlogData extends Component {
     } = this.props.blog;
     return (
       <div className="container-fluid" style={this.blogStyle()}>
-        <div className="container-fluid" style={this.blogStyle()}>
+        <div className="container-fluid">
           <h1 className="display-4" style={{ textAlign: 'center' }}>
             {title}
           </h1>
@@ -94,7 +95,7 @@ class BlogData extends Component {
           </div>
         </div>
         <div>
-          <form style={{ width: '100%' }} action="javascript:void(0);">
+          <form style={{ width: '100%',backgroundColor:'white' }} action="javascript:void(0);">
             <div className="form-group">
               <label for="userName" style={{ paddingRight: '90%' }}>
                 Enter a Comment:
@@ -114,10 +115,12 @@ class BlogData extends Component {
               Submit
             </button>
           </form>
-          Comments:
+          <h1>Comments:</h1>
+          <div style={{paddingBottom:'20px',marginBottom:'20px'}}>
           {comments.map((number) => (
-            <p>{number}</p>
+            <p style={{padding:'25px',border:'2px solid black'}}>{number}</p>
           ))}
+          </div>
         </div>
       </div>
     );

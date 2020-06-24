@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 class EditBlog extends Component {
-    
   state = {
     title: this.props.blog.title,
     body: this.props.blog.body,
@@ -28,9 +27,7 @@ class EditBlog extends Component {
               type="text"
               className="form-control"
               value={this.state.imgUrl}
-              onChange={(e) =>
-                this.setState({ imgUrl: e.target.value || '' })
-              }
+              onChange={(e) => this.setState({ imgUrl: e.target.value || '' })}
             />
           </div>
           <div className="form-group">
@@ -45,17 +42,19 @@ class EditBlog extends Component {
                 this.setState({ body: e.target.value })
               }></textarea>
           </div>
-        <Link to="/admin/blogData">
-          <button
-            onClick={this.props.edit.bind(
-              this,
-              this.state.title,
-              this.state.body,
-              this.state.imgUrl
-            )}
-            className="btn btn-default">
-            Save
-          </button>
+          <Link to="/admin/blogData">
+            <div className="text-center" style={{paddingBottom:'40px'}}>
+              <button
+                onClick={this.props.edit.bind(
+                  this,
+                  this.state.title,
+                  this.state.body,
+                  this.state.imgUrl
+                )}
+                className="btn btn-success">
+                Save
+              </button>
+            </div>
           </Link>
         </form>
       </div>
