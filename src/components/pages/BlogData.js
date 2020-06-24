@@ -118,7 +118,7 @@ class BlogData extends Component {
           <h1>Comments:</h1>
           <div style={{paddingBottom:'20px',marginBottom:'20px'}}>
           {comments.map((number) => (
-            <p style={{padding:'25px',border:'2px solid black'}}>{number}</p>
+            <p style={{padding:'25px',border:'2px solid black',textAlign:'left'}}>{number}</p>
           ))}
           </div>
         </div>
